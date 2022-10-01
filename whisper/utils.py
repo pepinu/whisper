@@ -41,7 +41,7 @@ def format_timestamp(seconds: float, always_include_hours: bool = False, decimal
     milliseconds -= seconds * 1_000
 
     hours_marker = f"{hours}:" if always_include_hours or hours > 0 else ""
-    return f"{hours_marker}{minutes:02d}:{seconds:02d}{decimal_marker}{milliseconds:03d}"
+    return f"{hours_marker}{minutes:02d}:{seconds:02d}"
 
 
 def write_txt(transcript: Iterator[dict], file: TextIO):
